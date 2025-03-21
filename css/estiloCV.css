@@ -1,15 +1,22 @@
 /* ---------NORMALIZAR NAVEGADOR---------------- */
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    
+    box-sizing: border-box;    /*para que el padding y el border no se sumen al width*/
+    text-decoration: none;
+
+
 }
-body{
+
+body {
     font-family: 'Arial', sans-serif;
     background-color: #24a126;
+    /* UTILIZAR ESTAS UNIDADES UNICAMENTE EN EL BODY */
+
+    
 }
-header{
+
+header {
     background-color: #a12424;
     color: white;
     text-align: center;
@@ -19,5 +26,166 @@ header{
     height: 100px;
 }
 
+main {
+    width: 70%;
+    background-color: white;
+}
+
+aside {
+    background-color: #a12424;
+    color: white;
+    width: 30%;
+    height: 100%;
+
+
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /*para que la imagen no se deforme*/
+
+}
+
+.perfil {
+    padding: 1em;
+    width: 100%;
+    display: grid;
+    /*para centrar el texto e imagen*/
+    place-items: center;
+    /*centrar el texto*/
+
+    /*centrar el texto*/
+    .foto {
+        border: double 10px rgb(126, 106, 106);
+        box-shadow: 10px 10px 20px 0px rgba(73, 158, 161, 0.706), -50px 0px 20px 0px rgb(235, 232, 32), 50px 0px 80px 0px rgba(213, 113, 41, 0.7);
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        overflow: hidden;
+        /*para que la imagen no se salga del circulo*/
+    }
+
+    .datos {
+        text-align: center;
+    }
+}
+
+.datosPersonales {
+    width: 100%;
+    background-color: aqua;
+    padding: 2em;
+    color: black;
+
+    .listaDP {
+        margin-top: 1em;
+        flex-direction: column;
+        gap: 1em;
+
+        li {
+            list-style: none;
+        }
+    }
+}
+
+.redes {
+    width: 100%;
+    background-color: pink;
+    padding: 2em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.educacion {
+    width: 100%;
+    padding: 2em;
+}
+
+
+
+/* --------colores---------- */
+
+.bg-azul {
+    background-color: #24a1a1;
+}
+.bg-blanco{
+    background-color: white;
+}
+.bg-black{
+    background-color: black;
+}
+
+.txt-white{
+    color: white;
+}
+.txt-yellow{
+    color: yellow;
+}
+
+/* ----------ordenamiento de elementos-------- */
+
+.d-flex{
+    display: flex;
+}
+.columna{
+    flex-direction: column;
+}
+.fila{
+    flex-direction: row;
+}
+.centrado{  
+    justify-content: center;
+    align-items: center;
+}
+
+
+.contenedorFlexbox:nth-child(2){
+    display: flex;
+    /* flex-direction: column; */
+    background-color: rgb(152, 150, 150);
+    overflow-x: auto;
+    gap:10px; /*espacio entre elementos*/
+    justify-content:center;
+    align-items: center;
+    height: 499px;
+}
+.tarjeta{
+    height:399px;
+    flex-grow: 1; /*para que  se expanda*/
+    flex-shrink: 1; /*para que no se encoja*/
+    flex-basis: auto;
+    flex: 0 0 100px; /*para que no se expanda ni se encoja*/
+    background-color: indigo;
+    color:white;
+    border-radius: 1em; /*para redondear las esquinas*/
+    padding: 1em; /*para que el texto no se pegue a los bordes*/
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); /*sombra*/
+}
+
+.tarjeta:nth-of-type(2){
+    background-color: transparent;
+    border: solid 3px red;
+    font-family: serif;
+
+}
+.tarjeta:hover{
+   box-shadow: 0 0 20px black;
+   transform: scale(1.02);
+    transition: all .15s ease-out;
+    cursor: pointer;
+}
+
+.tarjetaTitulo{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.tarjetaContenido{
+    font-size: 1em;
+    background-color: white;
+    color: gray;
+    padding: 1em;
+    border-radius: 1em;
+}
 
 
