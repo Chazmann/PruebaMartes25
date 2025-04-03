@@ -26,8 +26,9 @@ body {
     background-color: indianred;
     color: white;
     font-size: 3em;
-    line-height: 0em;font-weight: lighter!important;
+    line-height: 1em;font-weight: lighter!important;
      border-radius: 50%;
+     text-align: center;
 }
 
 .cabecera {
@@ -44,7 +45,7 @@ body {
 }
 
 .fotoPerfil{
-    flex:0 1 auto ;
+    flex:1 1 auto ;
     aspect-ratio: 1/1;
     border-radius: 50%;
     background-color: white;
